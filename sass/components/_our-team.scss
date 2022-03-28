@@ -1,9 +1,9 @@
 .section--grey-color {
   background-color: $primary-light-color-button;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     padding-bottom: 60px;
   }
-  @media screen and (min-width: 1201px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -20,23 +20,22 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__item {
-      flex-basis: calc((100% - 1 * 30px) / 2);
-    }
-    &__item:nth-child(2n + 1) {
-      margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.community__item {
+  & + & {
+    margin-top: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
     }
   }
   @media screen and (min-width: 1200px) {
-    &__item {
-      flex-basis: calc((100% - 3 * 30px) / 4);
-    }
-
-    &__item:not(:last-child) {
-      margin-right: 30px;
-    }
+    width: calc((100%-30px) / 2);
   }
 }
 
